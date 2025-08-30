@@ -1,0 +1,422 @@
+/* --- Page Layout --- */
+.historyContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    min-height: 100vh;
+}
+
+/* Sidebar styles removed - now using top navbar layout */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #06b6d4;
+    margin-bottom: 2rem;
+}
+
+.navHeading {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    font-weight: 600;
+    margin: 1.5rem 0 0.5rem 0;
+    letter-spacing: 0.05em;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar li a:hover {
+    background-color: #f3f4f6;
+}
+
+.sidebar li.active a {
+    background-color: #eef2ff;
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.userProfile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.userAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #60a5fa;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* --- Main Content --- */
+.mainContent {
+    flex-grow: 1;
+    padding: 2rem 3rem;
+    overflow-y: auto;
+}
+
+.headerCard {
+    background: rgba(51, 65, 85, 0.9);
+    border: 1px solid #64748b;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.headerCard h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    color: #ffffff;
+}
+
+.subtitle {
+    margin: 0.25rem 0 0 0;
+    color: #94a3b8;
+}
+
+.totalVideos {
+    text-align: right;
+}
+
+.totalVideos span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.totalVideos p {
+    margin: -0.25rem 0 0 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.csvDownloadButton {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  background: linear-gradient(90deg, #4a90e2 60%, #50e3c2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  cursor: pointer;
+}
+.csvDownloadButton:hover {
+  background: linear-gradient(90deg, #357ab8 60%, #3cc9a7 100%);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* --- Controls Container --- */
+.controlsContainer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* --- Search Bar --- */
+.searchBar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(51, 65, 85, 0.9);
+    border: 1px solid #64748b;
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    flex-grow: 1;
+}
+
+.searchIcon {
+    color: #94a3b8;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    background: transparent;
+    color: #ffffff;
+}
+
+.searchInput::placeholder {
+    color: #94a3b8;
+}
+
+/* --- Clear Button --- */
+.clearButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.clearButton:hover {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    transform: translateY(-1px);
+}
+
+.clearButton:active {
+    transform: translateY(0);
+}
+
+.clearButton:disabled {
+    background: #475569;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* --- Content States (Loading, Empty, Grid) --- */
+.loadingText {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.1rem;
+    color: #94a3b8;
+}
+.errorText {
+    color: #f87171;
+    background: rgba(248, 113, 113, 0.1);
+    border: 1px solid #f87171;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(51, 65, 85, 0.9);
+    border: 1px solid #64748b;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.emptyIcon {
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+}
+
+.emptyState h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0 0 0.5rem 0;
+}
+
+.emptyState p {
+    color: #94a3b8;
+    margin-bottom: 2rem;
+    max-width: 350px;
+}
+
+.uploadButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.uploadButton:hover {
+    background: linear-gradient(135deg, #0891b2, #0e7490);
+    transform: translateY(-1px);
+}
+
+/* --- History Grid --- */
+.historyGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+    gap: 2rem;
+}
+
+.historyCard {
+    background: rgba(51, 65, 85, 0.9);
+    border: 1px solid #64748b;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.historyCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(6, 182, 212, 0.3);
+    border-color: #06b6d4;
+}
+
+/* Card Header */
+.cardHeader {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    border-bottom: 1px solid #64748b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardHeader h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
+}
+
+.uploadDate {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* Video Section - Simplified layout */
+.videoSection {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoSection h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.videoPlayer {
+    width: 100%;
+    height: 320px;
+    border-radius: 8px;
+    background-color: #000;
+    flex-shrink: 0;
+}
+
+.videoInfo {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid #475569;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.videoLabel {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.videoStatus {
+    font-size: 0.875rem;
+    color: #22c55e;
+    font-weight: 600;
+}
+
+.coordinateInfo {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(6, 182, 212, 0.1);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    border: 1px solid #06b6d4;
+}
+
+.coordinateLabel {
+    font-size: 0.75rem;
+    color: #06b6d4;
+    font-weight: 500;
+}
+
+.coordinateCount {
+    font-size: 0.875rem;
+    color: #0891b2;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .historyGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cardHeader h3 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .controlsContainer {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: stretch;
+    }
+    
+    .clearButton {
+        justify-content: center;
+    }
+}

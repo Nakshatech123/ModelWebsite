@@ -1,0 +1,112 @@
+/* This file can be placed in app/login/auth.module.css and reused */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+}
+
+.form {
+  background: rgba(51, 65, 85, 0.9);
+  border: 1px solid #64748b;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #64748b;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background: rgba(30, 41, 59, 0.8);
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.form input::placeholder {
+  color: #94a3b8;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+}
+
+.form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form button:hover {
+  background: linear-gradient(135deg, #0891b2, #0e7490);
+  transform: translateY(-1px);
+}
+
+.form button:disabled {
+  background: #475569;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error {
+  background: rgba(248, 113, 113, 0.1);
+  color: #f87171;
+  border: 1px solid #f87171;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.success {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid #22c55e;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.toggle {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.toggle a {
+  color: #06b6d4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.toggle a:hover {
+  text-decoration: underline;
+}

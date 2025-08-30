@@ -1,0 +1,422 @@
+/* Models Page Styles */
+.modelsContainer {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  min-height: 100vh;
+}
+
+.modelsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.modelsHeader h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.modelsHeader p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+/* Add Button */
+.addButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.addButton:hover {
+  background: linear-gradient(135deg, #0891b2, #0e7490);
+  transform: translateY(-1px);
+}
+
+/* Add Model Form */
+.addModelForm {
+  background: rgba(51, 65, 85, 0.9);
+  border: 1px solid #64748b;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.addModelForm h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fieldGroup label {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 0.875rem;
+}
+
+.fieldGroup input,
+.fieldGroup textarea,
+.fieldGroup select {
+  padding: 0.75rem;
+  border: 1px solid #64748b;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: rgba(30, 41, 59, 0.8);
+  color: #ffffff;
+}
+
+.fieldGroup input::placeholder,
+.fieldGroup textarea::placeholder {
+  color: #94a3b8;
+}
+
+.fieldGroup input:focus,
+.fieldGroup textarea:focus,
+.fieldGroup select:focus {
+  outline: none;
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+}
+
+.fieldGroup small {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.fieldGroup:last-child {
+  grid-column: 1 / -1;
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.saveButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.saveButton:hover {
+  background: #059669;
+}
+
+.cancelButton {
+  padding: 0.75rem 1.5rem;
+  background: #f3f4f6;
+  color: #374151;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancelButton:hover {
+  background: #e5e7eb;
+}
+
+/* Models Grid */
+.modelsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+/* Empty State */
+.emptyState {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: rgba(51, 65, 85, 0.9);
+  border: 1px solid #64748b;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.emptyState svg {
+  width: 64px;
+  height: 64px;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.emptyState h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.emptyState p {
+  margin: 0 0 2rem 0;
+  color: #94a3b8;
+}
+
+/* Model Card */
+.modelCard {
+  background: rgba(51, 65, 85, 0.9);
+  border: 1px solid #64748b;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.modelCard:hover {
+  box-shadow: 0 10px 35px rgba(6, 182, 212, 0.3);
+  border-color: #06b6d4;
+  transform: translateY(-2px);
+}
+
+.modelHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modelIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  border-radius: 12px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.modelInfo {
+  flex: 1;
+}
+
+.modelInfo h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.modelCategory {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(6, 182, 212, 0.2);
+  color: #06b6d4;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.modelActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 6px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.actionButton:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.modelDescription {
+  margin: 0 0 1rem 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Detection Classes */
+.detectionClasses {
+  margin-bottom: 1rem;
+}
+
+.detectionClasses h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.classesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.classTag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background: #f0f9ff;
+  color: #0369a1;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Model Status */
+.modelStatus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.statusInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.statusDot.active {
+  background: #10b981;
+}
+
+.statusDot.inactive {
+  background: #ef4444;
+}
+
+.fileName {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-family: monospace;
+}
+
+/* Upload Section */
+.uploadSection {
+  margin-top: 1rem;
+}
+
+.uploadButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background: #f3f4f6;
+  color: #374151;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.uploadButton:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modelsContainer {
+    padding: 1rem;
+  }
+
+  .modelsHeader {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .modelsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .modelHeader {
+    flex-wrap: wrap;
+  }
+
+  .modelActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .modelStatus {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
