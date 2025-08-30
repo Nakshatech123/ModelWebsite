@@ -1,0 +1,23 @@
+1
+00:00:00,000 --> 00:00:05,000
+GPS coordinates: latitude: 12.936080 longitude: 77.610699
+
+2
+00:00:05,000 --> 00:00:10,000
+GPS coordinates: latitude: 12.936180 longitude: 77.610799
+
+3
+00:00:10,000 --> 00:00:15,000
+GPS coordinates: latitude: 12.936280 longitude: 77.610899
+
+4
+00:00:15,000 --> 00:00:20,000
+GPS coordinates: latitude: 12.936380 longitude: 77.610999
+
+5
+00:00:20,000 --> 00:00:25,000
+GPS coordinates: latitude: 12.936480 longitude: 77.611099
+
+6
+00:00:25,000 --> 00:00:30,000
+GPS coordinates: latitude: 12.936580 longitude: 77.611199

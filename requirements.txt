@@ -1,0 +1,23 @@
+fastapi
+uvicorn
+python-multipart
+aiofiles
+passlib[bcrypt]
+python-jose[cryptography]
+ultralytics
+opencv-python-headless
+pandas
+shapely
+reportlab
+matplotlib
+pysrt
+requests
+torch>=2.0.0
+torchvision>=0.15.0
+
+
+
+BACKEND
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\venv311\Scripts\Activate.ps1
+uvicorn main:app --reload
